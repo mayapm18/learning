@@ -19,14 +19,16 @@ def plusMinus(arr):
     for a in arr:
         if a > 0:
             pos = pos + 1
-        if a < 0: 
+        elif a < 0:  #not working with if
             neg = neg + 1
         else:
             zero = zero + 1
+
+    #f"{:.nf} -> n digits after the comma
     
-    print(pos / len(arr))
-    print(neg / len(arr))
-    print(zero / len(arr))
+    print(f"{pos / len(arr):.6f}")
+    print(f"{neg / len(arr):.6f}")
+    print(f"{zero / len(arr):.6f}")
 
 if __name__ == '__main__':
     n = int(input().strip())
