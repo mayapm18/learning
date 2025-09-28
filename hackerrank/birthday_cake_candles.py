@@ -19,15 +19,15 @@ def find_max_of_a(candles):
     for a in candles:
         if a > max_of_a:
             max_of_a = a
-    return a
+    return max_of_a
             
             
 def birthdayCakeCandles(candles):
-    
+    max_a = find_max_of_a(candles)
     count_of_max = 0
     
     for k in candles:
-        if k == find_max_of_a(candles):
+        if k == max_a:
             count_of_max += 1
             
     return count_of_max
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     candles_count = int(input().strip())
 
     candles = list(map(int, input().rstrip().split()))
-
+    
     result = birthdayCakeCandles(candles)
 
     fptr.write(str(result) + '\n')
