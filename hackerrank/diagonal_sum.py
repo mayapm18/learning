@@ -22,7 +22,7 @@ def diagonalDifference(arr):
         
     if pr > sec:
         k = pr - sec
-    if pr == sec:
+    elif pr == sec:
         k = 0
     else:
         k = sec - pr
