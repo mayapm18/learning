@@ -12,15 +12,22 @@ import sys
 # The function is expected to return an INTEGER.
 # The function accepts INTEGER_ARRAY candles as parameter.
 #
-
-def birthdayCakeCandles(candles):
+def find_max_of_a(candles):
+    
     max_of_a = candles[0]
-    count_of_max = 0
+    
     for a in candles:
         if a > max_of_a:
             max_of_a = a
-            count_of_max = 1
-        elif a == max_of_a:
+    return a
+            
+            
+def birthdayCakeCandles(candles):
+    
+    count_of_max = 0
+    
+    for k in candles:
+        if k == find_max_of_a(candles):
             count_of_max += 1
             
     return count_of_max
