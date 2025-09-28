@@ -20,7 +20,7 @@ def birthdayCakeCandles(candles):
         if a > max_of_a:
             max_of_a = a
             count_of_max = 1
-        if a == max_of_a:
+        elif a == max_of_a:
             count_of_max += 1
             
     return count_of_max
