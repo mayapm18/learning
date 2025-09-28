@@ -13,18 +13,17 @@ import sys
 #
 
 def miniMaxSum(arr):
-    min_num = arr[0]
-    max_num = arr[0]
-    s = 0
-    
-    for a in arr: 
-        s = s + a
-        if a < min_num:
-            min_num = a
-        if a > max_num:
-            max_num = a
-            
-    print(s-max_num, s-min_num)
+    min_a = arr[0]
+    max_a = arr[0]
+    k = 0
+    for a in arr:
+        k = k + a  
+        if a > max_a:
+            max_a = a
+        if a < min_a:
+            min_a = a
+    print(k - max_a,k - min_a)
+
 
 if __name__ == '__main__':
 
