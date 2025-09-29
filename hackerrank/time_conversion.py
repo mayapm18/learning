@@ -12,7 +12,7 @@ import sys
 # The function is expected to return a STRING.
 # The function accepts STRING s as parameter.
 #
-def put_hms_in_arr(s):#ne maha poslednite ['','']
+def put_hms_in_arr(s):#ne maha poslednite '',''
     hms = ''
     arr = []
     for a in s:
@@ -34,17 +34,27 @@ def is_time_pm(s):
         
 
 def fix_time(hh, mm, ss, is_pm):# TODO,  pm 0 do 11 stava +12, ako am 12 = 00
-    hh = int(hh)
-    mm = int(mm)
-    ss = int(ss)
+    
     
     if is_pm:
+        hh = int(hh)
         if hh != 12:
             hh = hh + 12
+        hh = str(hh)#==👇
+        #     hh = str(hh)
+        # else:
+        #     hh = str(hh)
     else:
+        print('hh=',hh)
+        hh = int(hh)
         if hh == 12:
+            hh = str(hh)
             hh='00'#int->str?
-            
+        else:
+            if hh<10:
+                hh = '0' + str(hh)
+            else: 
+                hh = str(hh)
     return hh, mm, ss
     
     
@@ -62,7 +72,7 @@ def timeConversion(s):
     hh, mm, ss = fix_time(hh,mm,ss, is_pm) 
     
     
-    print(hh,':', mm, ':', ss) 
+    return hh+':'+mm+':'+ss
     
         
 
