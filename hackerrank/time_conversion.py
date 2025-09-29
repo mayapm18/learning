@@ -41,7 +41,7 @@ def timeConversion(s):
         
         if is_pm:
             if arr[0] == 12:
-                hh = '00'
+                hh = 00
             else:
                 hh = hh + 12
     print(hh,':', mm, ':', ss) 
