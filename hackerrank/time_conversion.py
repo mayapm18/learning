@@ -14,16 +14,14 @@ import sys
 #
 def put_hms_in_arr(s):
     hms = ''
-    len(s) == len(s) - 2
     arr = []
     for a in s:
-        if a != ':':
+        if a not in [':','P','A','M']:
             hms = hms + a
         else:
             arr.append(hms)
             hms = ''
             
-    #remove AM/PM
     arr.append(hms)  
     return arr
 
@@ -55,8 +53,7 @@ if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     s = input()
-#timeConversion(s)#
-    result = put_hms_in_arr(s)
+    result = timeConversion(s)
 
     fptr.write(result + '\n')
 
