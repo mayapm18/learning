@@ -28,8 +28,6 @@ def kangaroo(x1, v1, x2, v2):
             return 'YES'
         else:
             return 'NO'
-    else:
-        return 'NO'    
         
             
     if (x1-x2)%(v2-v1) == 0 and (x1-x2)/(v2-v1) >= 0:
