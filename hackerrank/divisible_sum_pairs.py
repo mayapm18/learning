@@ -18,7 +18,7 @@ import sys
 
 def divisibleSumPairs(n, k, ar):
     curr_sum = 0
-    count = 0
+    count = -1
     
     for a in range(len(ar)):
         for b in range(len(ar) - 1 ):
