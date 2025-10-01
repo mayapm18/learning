@@ -18,12 +18,12 @@ import sys
 
 def divisibleSumPairs(n, k, ar):
     curr_sum = 0
-    count = -1
+    count = 0
     
-    for a in range(len(ar)):
-        for b in range(len(ar) - 1 ):
+    for a in range(n):
+        for b in range(a+1, n):
                 curr_sum = ar[a] + ar[b]
-                if curr_sum == k:
+                if curr_sum%k == 0:
                     count = count + 1
                     
     return count
