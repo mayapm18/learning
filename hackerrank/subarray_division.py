@@ -25,11 +25,11 @@ def birthday(s, d, m):
     sum_of_a = 0
     
     for a in range(len(s) - m + 1):
+        sum_of_a = 0 #restart here
         for b in range(m):
             sum_of_a = sum_of_a + s[a+b]
         if sum_of_a == d:
             win_choc = win_choc + 1
-                
     
     return win_choc
         
