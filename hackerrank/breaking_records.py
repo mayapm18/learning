@@ -15,20 +15,21 @@ import sys
 
 def breakingRecords(scores):
     
-    start_arr = scores[0]
+    for_min = scores[0]
+    for_max = scores[0]
+    
     min_score = 0
     max_score = 0
     
     for b in scores:
-        if b < start_arr:
-            start_arr = b
+        if b < for_min:
+            for_min = b
             min_score += 1
             
     for c in scores:
-        if c > start_arr:
-            start_arr = c
+        if c > for_max:
+            for_max = c
             max_score += 1
-        
     
     
     return max_score, min_score
