@@ -16,17 +16,20 @@ import sys
 #
 
 def sockMerchant(n, ar):   
-    many_socks = int(n)//2 - 1
-    print(many_socks)
-    
+    many_socks = 0 
+
     for a in range(n):
+        if ar[a] == -1: #skip if ==ar[b]
+            continue
+        count = 1
         for b in range(a+1, n):
-            if ar[a]== ar[b]:
-
-                many_socks = many_socks
-                break
-
-                  
+            if ar[a] == ar[b]:
+                count = count + 1
+                ar[b] = -1 #remove
+                
+        many_socks = many_socks + count//2
+        ar[a] = -1
+                
     return many_socks
         
 
