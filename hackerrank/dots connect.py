@@ -22,8 +22,8 @@ def sockMerchant(n, ar):
     for a in range(n):
         for b in range(a+1, n):
             if ar[a]== ar[b]:
-                ar[a] = -1 #mark as used
-                ar[b] = -1 #mark as used
+
+                many_socks = many_socks
                 break
 
                   
