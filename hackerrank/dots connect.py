@@ -15,14 +15,14 @@ import sys
 #  2. INTEGER_ARRAY ar
 #
 
-def sockMerchant(n, ar):
-    same = ar[0]
+def sockMerchant(n, ar):   
     count = 0
     
     for a in ar:
+        same = ar[0]
         if same == a:
             count = count + 1
-            break
+
     return count
         
 
