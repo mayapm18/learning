@@ -22,12 +22,12 @@ def bonAppetit(bill, k, b):
     for a in bill:
         total += int(a)
     total = total - bill[k]
-    if total/2 == k:
+    if (total/2) == b:
         print('Bon Appetit') 
-    elif k > (total/2):
-        print(k - (total/2))
+    elif b > (total/2):
+        print (int(b - (total/2)))
     else:
-        print(total/2 - k)
+        print(int((total/2) - b))
             
 
 if __name__ == '__main__':
