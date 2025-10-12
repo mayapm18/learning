@@ -32,6 +32,7 @@ def lcm_a_multiply(a):
             lcm_a = k
     print(lcm_a)
     #make arr with all the multiplying numbers with lcm
+    # KUNY FIXED
           
             
 def gcd_b_divide(b):
