@@ -1,6 +1,7 @@
 # Learning
 
 here i solved hackerrank problems.
+https://www.hackerrank.com/domains/algorithms
 
 To run a file run in you terminal:
 ```bash
@@ -14,3 +15,6 @@ python path_to_file
 ```bash
 git checkout -b two_sets
 ```
+2. Make changes in new branch
+3. Publush new branch 
+4. Create Pull request GitHub
