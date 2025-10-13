@@ -21,38 +21,45 @@ import sys
 # arr_a
 # arr_b
 
-#need: lcm_in_a, gcd_in_b
-#x*lcm
-#gcd/y
-#how many lcm*x=gcd/y
-def lcm_a_multiply(a):
-    lcm_a = 0
-    for k in a:
-        if k>lcm_a:
-            lcm_a = k
-    print(lcm_a)
-    #make arr with all the multiplying numbers with lcm
-    # KUNY FIXED
-          
+
+def find_lcm(x,y):
+    if x>y:
+        great = x
+    else:
+        great = y
+        
+    if great % x == 0 and great % y == 0:
+        return great
+    great = great + 1
+    
             
-def gcd_b_divide(b):
-    gcd_b = 0
-    for m in b: 
-        if m< gcd_b:
-            gcd_b = m
-    print(gcd_b)
-    #make arr for dividing gcd
+def find_gcd(x,y):
+    small = 0
+    gcd_num = 1
+    if x>y:
+        small = y
+    else:
+        small = x 
+        
+    for k in range(small + 1):
+        if x % k  == 0 and y % k == 0:
+            gcd_num  = k
+            
+    return gcd_num 
+    
 
 def getTotalX(a, b):
-    #lcm*x=gcd/y?
-    # how many numbers are like that
+
     count = 0
+
+    for p in range(len(a)):
+        l = find_lcm(a[0], a[p])
+    for k in range(len(b)):
+        g = find_gcd(b[0], b[k])
     
-    for x in lcm_a_multiply:
-        for y in gcd_b_divide:
-            if x == y:
-                count += 1
-            
+    if l == g:
+        count += 1
+        
     return count
     
 
