@@ -22,6 +22,8 @@ def gradingStudents(grades):
             for a in range(3):
                 if (grade + a) % 5 == 0:
                     new_grade = grade + a
+                    #after finding the perfect a, we should stop the loop
+                    break
                 else:
                     new_grade = grade
         elif grade == 38:
