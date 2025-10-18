@@ -15,22 +15,20 @@ import sys
 
 def gradingStudents(grades):
     arr = []
-    
+    new_grade = ''
+
     for grade in grades:
         if grade > 38:
             for a in range(3):
                 if (grade + a) % 5 == 0:
-                    grade = grade + a
-
+                    new_grade = grade + a
                 else:
-                    grade = grade
-            arr.append(grade)
+                    new_grade = grade
         elif grade == 38:
-            grade = 40
-            arr.append(grade)
+            new_grade = 40
         else:
-            grade = grade
-            arr.append(grade)
+            new_grade = grade
+        arr.append(new_grade)
     
     return arr
     
