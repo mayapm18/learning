@@ -21,12 +21,12 @@ def superReducedString(s):
             for j in range(len(s)):
                 if j != i and j != i + 1:
                     empty = empty + s[j]
+            superReducedString(empty)
+        if empty == '':
+            return 'Empty String'
         else:
-            empty = empty + s[i]
-            
-            
-    return empty
-
+            return empty
+                
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
