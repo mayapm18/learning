@@ -15,13 +15,13 @@ import sys
 
 def superReducedString(s):
     empty = ''
-    for i in range(len(s)):
-        if s[i] != s[i+1]:
-            empty = empty 
+    for i in range(len(s) - 1):
+        if s[i] == s[i+1]:
             for j in range(len(s)):
                 if j != i and j != i + 1:
                     empty = empty + s[j]
             superReducedString(empty)
+
         if empty == '':
             return 'Empty String'
         else:
