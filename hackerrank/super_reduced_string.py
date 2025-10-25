@@ -12,20 +12,30 @@ import sys
 # The function is expected to return a STRING.
 # The function accepts STRING s as parameter.
 #
-
-def superReducedString(s):
+    
+def HelpRed(s):
     empty = ''
+    skip = False
     for i in range(len(s) - 1):
-        if s[i] == s[i+1]:
-            for j in range(len(s)):
-                if j != i and j != i + 1:
-                    empty = empty + s[j]
-            superReducedString(empty)
+        if skip:  # check if we need to skip this char
+            skip = False  # reset skip
+            continue
 
-        if empty == '':
-            return 'Empty String'
+            
+        if s[i] == s[i + 1]:
+            skip = True  # skip the next char
         else:
-            return empty
+            empty = empty + s[i]  
+    return empty  
+    
+def superReducedString(s):
+    empty = HelpRed(s)
+
+    if empty == '':  
+        return 'Empty String'
+    else:
+        return superReducedString(empty)  
+                
                 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
