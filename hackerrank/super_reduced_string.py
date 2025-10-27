@@ -25,11 +25,12 @@ def superReducedString(s):
     """    
     # Step 1
     has_two_equal = False
-    new_s = ''
+    new_s=''
     for i in range(len(s) - 1):
         if s[i] == s[i+1]:
+            new_s = s[:i] + s[i+2:]
             has_two_equal = True
-            new_s = new_s + ''
+            break
             has_two_equal = False
         else:
             new_s = new_s + s[i]
@@ -37,7 +38,7 @@ def superReducedString(s):
         # step 2.2
         # TODO
         if new_s == '' :
-            return 'Empty string'
+            return 'Empty String'
         else:
             return superReducedString(new_s)
     else:
