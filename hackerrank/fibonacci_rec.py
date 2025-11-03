@@ -7,7 +7,9 @@ def fibonacci(n):
         new_n = 1
         return new_n
     else:
-        return fibonacci((new_n-1) + (new_n-2))
+        new_n = (n - 1) + (n - 2)
+        return fibonacci(new_n)
     
+
 n = int(input())
 print(fibonacci(n))
