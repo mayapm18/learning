@@ -21,6 +21,6 @@ git checkout -b two_sets
 
 
 # Problems
--[ ] [Is Palindrome](https://leetcode.com/problems/longest-palindromic-substring/description/)
--[ ] Given an array of integers `[5,2,10,21,-10,20,-10]`, find the minimum and maximim elements. Find the second minimum element (e.g 2).
--[ ] Given an array of integers  `[2,3,4,2]`, find the product of all elements (e.g 24). Find the cumulative product array (e.g [2,6,24,48], note 2 = 2, 6 = 2*3, 24 = 2*3*4, 48 = 2*3*4*2)
+- [ ] [Is Palindrome](https://leetcode.com/problems/longest-palindromic-substring/description/)
+- [ ] Given an array of integers `[5,2,10,21,-10,20,-10]`, find the minimum and maximim elements. Find the second minimum element (e.g 2).
+- [ ] Given an array of integers  `[2,3,4,2]`, find the product of all elements (e.g 24). Find the cumulative product array (e.g [2,6,24,48], note 2 = 2, 6 = 2*3, 24 = 2*3*4, 48 = 2*3*4*2)
