@@ -1,5 +1,3 @@
-#https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem
-
 def fibonacci(n):
 
     if n == 0:
@@ -9,7 +7,8 @@ def fibonacci(n):
         new_n = 1
         return new_n
     else:
-        return fibonacci(n-1) + fibonacci(n-2)
+        new_n = (n - 1) + (n - 2)
+        return fibonacci(new_n)
     
 
 n = int(input())
